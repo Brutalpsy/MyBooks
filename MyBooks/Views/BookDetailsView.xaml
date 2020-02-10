@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyBooks.Views.BookDetailsView">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete"
+                     IsDestructive="true"
+                      Command="{Binding DeleteBookCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <Image Source="{Binding BestBook.Image_url}" />
+        <Label FontSize="20"
+               TextColor="Silver"
+               Text="{Binding BestBook.Title}"/>
+        <Label FontSize="25"
+               Text="{Binding BestBook.Author_Name}"
+               FontAttributes="Bold"/>
+    </StackLayout>
+</ContentPage>
